@@ -1,13 +1,17 @@
-from cadastro_login import cadastrar_usuario
-from cadastro_login import fazer_login
+from cadastro_login import cadastrar_usuario,fazer_login
+import sys
+sys.path.append("C:/Users/182400219/Documents/Projetos python/Loja-Geek/loja/")
+from loja import Loja
+
 def main():
     database = {}
+    Loja().entra()
 
     while True:
         print("\nEscolha uma opção:")
         print("1 - Cadastro")
         print("2 - Login")
-        print("3 - Sair")
+        print("3 - Entrar Na Loja")
         opcao = input("Opção: ")
 
         if opcao == '1':
@@ -21,7 +25,8 @@ def main():
             fazer_login(nome, senha, database)
 
         elif opcao == '3':
-            print("Saindo...")
+            print("Entrando na Loja !!")
+            
             break
 
         else:
@@ -29,3 +34,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
