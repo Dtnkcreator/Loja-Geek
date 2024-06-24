@@ -2,6 +2,7 @@ from cadastro_login import cadastrar_usuario
 from cadastro_login import fazer_login
 def main():
     database = {}
+    carrinho = {}
 
     while True:
         print("\nEscolha uma opção:")
