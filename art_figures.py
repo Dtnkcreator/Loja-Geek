@@ -1,9 +1,9 @@
 def figures():
     carrinho = {}
-    print("1...Super Mario")
-    print("2...Batman")
-    print("3...Superman")
-    print("4...Retornar para tela inicial")
+    print("1....Super Mario")
+    print("2....Batman")
+    print("3....Superman")
+    print("4....Retornar para tela inicial")
     figures_pergunta = int(input("Qual opção gostaria de acessar? "))
     match figures_pergunta:
         case 1:
@@ -11,8 +11,7 @@ def figures():
             pergunta_compra = input("Gostaria de comprá-lo? (1. Sim 2. Não) ")
             match pergunta_compra:
                     case 1:
-                        adicionar_carrinho("supermario", carrinho)
-                        print(carrinho)
+                        pass
         case 2:
             print("\nInformações de Batman:\nPreço: R$65.00 \nTamanho: 40cm")
         case 3:

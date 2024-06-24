@@ -6,14 +6,14 @@ def cadastrar_usuario(nome, senha, database):
         print(f"Usuário '{nome}' já existe. Escolha outro nome de usuário.")
     else:
         database[nome] = senha
-        print(f"Usuário '{nome}' cadastrado com sucesso.")
+        print(f"\nUsuário '{nome}' cadastrado com sucesso.")
 
 
 
 def fazer_login(nome, senha, database):
 
     if nome in database and database[nome] == senha:
-        print(f"Login bem-sucedido. Bem-vindo, {nome}!")
+        print(f"\nLogin bem-sucedido. Bem-vindo, {nome}!")
         loja_geek()
     else:
         print("Nome de usuário ou senha incorretos.")
