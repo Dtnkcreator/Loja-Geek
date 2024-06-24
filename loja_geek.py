@@ -1,6 +1,7 @@
         
+
 def loja_geek():
-    print("Categorias:\n")
+    print("\nCategorias:")
     print("1 - Art figures")
     print("2 - Livros e Mangás")
     print("3 - Músicas")
