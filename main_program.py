@@ -19,7 +19,7 @@ def main():
             nome = input("Digite o nome de usuário: ")
             senha = input("Digite a senha: ")
             fazer_login(nome, senha, database)
-
+            break
         elif opcao == '3':
             print("Saindo...")
             break
