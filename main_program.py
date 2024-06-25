@@ -6,13 +6,17 @@ def main():
     usuario_logado = None
 
      # Adicionando produtos à loja
-    produto1 = Produto("camisa", 29.99, 50)
-    produto2 = Produto("oculos", 79.90, 30)
-    produto3 = Produto("meia", 119.99, 20)
+    produto1 = Produto("CAMISETA ITACHI", 89.99, 50)
+    produto2 = Produto("PANTUFA POTTER", 245.90, 30)
+    produto3 = Produto("FUNKO POP", 199.99, 40)
+    produto4 = Produto("CANECA ONE", 79.80, 70)
+    produto5 = Produto("QUADRINHO MONICA", 149.89, 110)
 
     loja.adicionar_produto(produto1)
     loja.adicionar_produto(produto2)
     loja.adicionar_produto(produto3)
+    loja.adicionar_produto(produto4)
+    loja.adicionar_produto(produto5)
 
     while True:
         print("\nEscolha uma opção:")
@@ -43,6 +47,7 @@ def main():
         
         elif opcao == '3':
             loja.listar_produtos()
+            input("pressione enter se quiser voltar ao menu: ")
         
         elif opcao == '4':
             if usuario_logado:
@@ -52,10 +57,13 @@ def main():
                     quantidade = int(input("Digite a quantidade desejada: "))
                     usuario_logado.adicionar_ao_carrinho(produto, quantidade)
                     print(f"{quantidade} unidades de {nome_produto} adicionadas ao carrinho.")
+                    input("pressione enter se quiser voltar ao menu: ")
                 else:
                     print("Produto não encontrado.")
+                    input("pressione enter se quiser voltar ao menu: ")
             else:
                 print("Faça login primeiro.")
+                input("pressione enter se quiser voltar ao menu: ")
         
         elif opcao == '5':
             if usuario_logado:
@@ -64,10 +72,13 @@ def main():
                 if produto:
                     usuario_logado.remover_do_carrinho(produto)
                     print(f"{nome_produto} removido do carrinho.")
+                    input("pressione enter se quiser voltar ao menu: ")
                 else:
                     print("Produto não encontrado no carrinho.")
+                    input("pressione enter se quiser voltar ao menu: ")
             else:
                 print("Faça login primeiro.")
+                input("pressione enter se quiser voltar ao menu: ")
         
         elif opcao == '6':
             if usuario_logado:
@@ -76,21 +87,26 @@ def main():
                     print(f"{produto.nome}: {quantidade} unidades")
                 total_carrinho = usuario_logado.calcular_total_carrinho()
                 print(f"Total a pagar: R${total_carrinho:.2f}")
+                input("pressione enter se quiser voltar ao menu: ")
             else:
                 print("Faça login primeiro.")
+                input("pressione enter se quiser voltar ao menu: ")
         
         elif opcao == '7':
             if usuario_logado:
                 loja.processar_pagamento(usuario_logado)
+                input("pressione enter se quiser voltar ao menu: ")
             else:
                 print("Faça login primeiro.")
+                input("pressione enter se quiser voltar ao menu: ")
         
         elif opcao == '8':
-            print("Saindo do programa...")
+            print("Saindo da loja...")
             break
         
         else:
             print("Opção inválida. Tente novamente.")
+            input("pressione enter se quiser voltar ao menu: ")
 
 if __name__ == "__main__":
     main()
