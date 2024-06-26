@@ -57,6 +57,7 @@ def main():
                     quantidade = int(input("Digite a quantidade desejada: "))
                     usuario_logado.adicionar_ao_carrinho(produto, quantidade)
                     print(f"{quantidade} unidades de {nome_produto} adicionadas ao carrinho.")
+
                     input("pressione enter se quiser voltar ao menu: ")
                 else:
                     print("Produto não encontrado.")

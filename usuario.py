@@ -8,8 +8,12 @@ class Usuario:
         self.carrinho.append((produto, quantidade))
     
     def remover_do_carrinho(self, produto):
-        self.carrinho = [(p, q) for p, q in self.carrinho if p != produto]
-    
+        novo_carrinho = []
+        for p, q in self.carrinho:
+            if p != produto:
+                novo_carrinho.append((p, q))
+        self.carrinho = novo_carrinho
+        
     def limpar_carrinho(self):
         self.carrinho = []
     
